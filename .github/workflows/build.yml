@@ -42,5 +42,5 @@ jobs:
     #    name: '8.4-${{ matrix.platform }}-${{ matrix.lib }}'
     #    path: '*.nupkg'
     #  continue-on-error: true
-    - name: Publish on Nuget.org
-      run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
+    #- name: Publish on Nuget.org
+    #  run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
