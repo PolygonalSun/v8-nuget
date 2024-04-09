@@ -13,7 +13,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        platform: ['x64'] #, 'x86']
+        platform: ['arm64'] #['x64', 'x86']
         lib: ['shared'] #, 'monolith']
     name: Build V8 ${{  github.event.inputs.version }} ${{ matrix.platform }}
     steps:
@@ -35,7 +35,7 @@ jobs:
       with:
         vsversion: '2022'
     - name: Build
-      run: python build.py --version=${{  github.event.inputs.version }} --platform=${{ matrix.platform }} --libs=${{ matrix.lib }} #--use-clang
+      run: python build.py --version=${{  github.event.inputs.version }} --platform=${{ matrix.platform }} --libs=${{ matrix.lib }} --use-clang
     #- name: Store packages
     #  uses: actions/upload-artifact@v2
     #  with:
