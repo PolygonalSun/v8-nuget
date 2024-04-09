@@ -35,7 +35,7 @@ jobs:
       with:
         vsversion: '2022'
     - name: Build
-      run: python build.py --version=${{  github.event.inputs.version }} --platform=${{ matrix.platform }} --libs=${{ matrix.lib }} --use-clang
+      run: python build.py --version=${{  github.event.inputs.version }} --platform=${{ matrix.platform }} --libs=${{ matrix.lib }} #--use-clang
     #- name: Store packages
     #  uses: actions/upload-artifact@v2
     #  with:
